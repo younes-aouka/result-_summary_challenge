@@ -58,6 +58,8 @@ span {
 @media (max-width:600px) {
     .resultSummaryComponent .result {
         width: 100%;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
     }
 }
 
