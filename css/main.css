@@ -148,7 +148,7 @@ span {
     border-radius: 7px; 
 }
 
-.resultSummaryComponent .summary .list li:hover {
+.resultSummaryComponent .summary .list li:not(:last-child):hover {
     cursor: pointer;
 }
 
@@ -205,5 +205,6 @@ span {
     border: transparent solid 0;
     background-color: rgb(48 59 89);
     color: rgb(235 239 248);
+    cursor: pointer;
 }
 /* end result summary component */
