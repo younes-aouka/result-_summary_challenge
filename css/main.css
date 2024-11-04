@@ -1,0 +1,209 @@
+/* start globale rules */
+body,body * {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    font-family: monospace;
+}
+
+ul {
+    list-style: none;
+}
+
+span {
+    display: inline-block;
+}
+/* end globale rules */
+/* start result summary component */
+/* pc and big screen */
+@media (min-width: 601px) {
+    .resultSummaryComponent {
+        display: flex;
+        width: 600px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+/* phone and small screen */
+@media (max-width:600px) {
+    .resultSummaryComponent {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+.resultSummaryComponent .result{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(to bottom, #6600ff, #1976D2);
+    border-radius: 31px;
+    padding: 39px;
+}
+
+/* phone and small-screen */
+@media (max-width:600px) {
+    .resultSummaryComponent .result {
+        width: 100%;
+    }
+}
+
+.resultSummaryComponent .result h3 {
+    font-size: 17px;
+    color: rgb(202 194 255);
+    font-weight: 500;
+}
+
+.resultSummaryComponent .result .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background:linear-gradient(to bottom, #00000054, transparent);
+    border-radius: 50%;
+}
+
+.resultSummaryComponent .result .box #rate {
+    font-size: 57px;
+    font-weight: 800;
+    color: white;
+}
+
+.resultSummaryComponent .result .box #unit {
+    color: rgb(148 135 255);
+}
+
+.resultSummaryComponent .result #assessment {
+    color: white;
+    font-size: 29px;
+}
+
+.resultSummaryComponent .result p {
+    color: rgb(186 185 255);
+    text-align: center;
+}
+
+.resultSummaryComponent .summary {
+    width: 50%;
+    padding: 39px 35px;
+    position: relative;
+}
+
+/* phone and small-screen */
+@media (max-width:600px) {
+    .resultSummaryComponent .summary {
+        width: 100%;
+    }
+}
+
+.resultSummaryComponent .summary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150%;
+    height: 100%;
+    z-index: -1;
+    box-shadow: rgb(231 237 251) 1px 12px 25px 0px; 
+    border-bottom-right-radius: 31px;
+}
+
+/* phone and small-screen */
+@media (max-width:600px) {
+    .resultSummaryComponent .summary::before {
+        display: none;
+    }
+}
+
+.resultSummaryComponent .summary h3{
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.resultSummaryComponent .summary .list{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+/* start of shared styling for summary content */
+.resultSummaryComponent .summary .list li:not(:last-child){
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;  
+    border-radius: 7px; 
+}
+
+.resultSummaryComponent .summary .list li:hover {
+    cursor: pointer;
+}
+
+.resultSummaryComponent .summary .list li .left i {
+    margin: 0 5px;
+}
+
+.resultSummaryComponent .summary .list li .right span:first-child {
+    font-weight: 600;
+}
+
+.resultSummaryComponent .summary .list li .right span:last-child {
+    color: #757575b5;
+}
+/* end of shared styling for summary content */
+/* reaction row */
+.resultSummaryComponent .summary .reaction {
+    background-color: rgb(255 246 245);
+}
+
+.resultSummaryComponent .summary .reaction .left {
+    color: rgb(236 95 100);
+}
+/* memory row */
+.resultSummaryComponent .summary .memmory{
+    background-color: rgb(255 249 236);
+}
+
+.resultSummaryComponent .summary .memmory .left {
+    color: rgb(252 188 86);
+}
+/* verbal row */
+.resultSummaryComponent .summary .verbal{
+    background-color: rgb(242 251 250);
+}
+
+.resultSummaryComponent .summary .verbal .left {
+    color: #0ac3b2;
+}
+/* visual row */
+.resultSummaryComponent .summary .visual {
+    background-color: rgb(243 243 253);
+}
+
+.resultSummaryComponent .summary .visual .left {
+    color: blue;
+}
+
+.resultSummaryComponent .summary li .continue {
+    margin: 25px 0 0 0;
+    padding: 10px;
+    width: 100%;
+    border-radius: 20px;
+    border: transparent solid 0;
+    background-color: rgb(48 59 89);
+    color: rgb(235 239 248);
+}
+/* end result summary component */
